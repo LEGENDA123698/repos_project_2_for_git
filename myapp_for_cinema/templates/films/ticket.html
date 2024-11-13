@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticket</title>
+    </head>
+    <body>
+        <h1>Ticket</h1>
+        {%for film in films%}
+        <a href = "{% url 'chose-film' film.id %}">{{film.title}}</a>
+        <br>
+        {%endfor%}
+    </body>
+</html>

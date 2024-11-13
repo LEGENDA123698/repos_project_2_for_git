@@ -1,0 +1,30 @@
+
+{% if request.user.is_authenticated%}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050; margin-right: 150px; margin-bottom: 550px;">
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:" width="30" height="30">
+            <use xlink:href="#check-circle-fill"/>
+        </svg>
+        <div>
+            Ти зареєстрований!
+        </div>
+    </div>
+</div>
+
+
+
+
+{% else %}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050; margin-right: 30px; margin-bottom: 550px;">
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:" width="30" height="30">
+            <use xlink:href="#exclamation-triangle-fill"/>
+        </svg>
+        <div>
+            Ти не зареєстрований!
+        </div>
+    </div>
+</div>
+
+
+{% endif %}

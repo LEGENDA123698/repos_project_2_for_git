@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container text-center">
+        <h1>Фільми</h1>
+        <div class="row">
+            {% for film in films %}
+            <div class="col-md-4 mb-3">
+                <a href="{% url 'chose-film' film.id %}">
+                    <h3>{{ film.title }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+        
+{% endblock %}
+

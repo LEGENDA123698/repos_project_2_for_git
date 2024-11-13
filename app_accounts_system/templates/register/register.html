@@ -1,0 +1,8 @@
+{% extends "films/film_list.html" %}
+{% block content %}
+    <form method="post" action="{% url 'register'%}" style="margin-top: 100px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
